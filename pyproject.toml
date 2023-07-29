@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "vshare"
+version = "0.1.0"
+description = ""
+authors = ["dikuchan <dikuchan@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+ruff = "^0.0.278"
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+]
+
+[tool.ruff.isort]
+combine-as-imports = true
+relative-imports-order = "closest-to-furthest"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
